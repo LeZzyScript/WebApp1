@@ -1,0 +1,31 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET temp files
+*.dbmdl
+*.bak
+*.log
+
+# DotNet-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish outputs
+*.publish.xml
+*.publishproj
+
+# Configuration files (local use only)
+appsettings.Development.json
+secrets.json
+
+# Others
+node_modules/
