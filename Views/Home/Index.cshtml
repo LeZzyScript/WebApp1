@@ -2,6 +2,45 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    body {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .background-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: url('https://learn.microsoft.com/_themes/docs.theme/master/en/_static/images/brand/aspnet-core-logo.svg') no-repeat center 10%/200px,
+                    rgba(255,255,255,0.05);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .text-center {
+        position: relative;
+        z-index: 1;
+        margin-top: 10vh;
+        background: rgba(255,255,255,0.85);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(30,60,114,0.15);
+        padding: 2rem 3rem;
+        display: inline-block;
+    }
+    h1.display-4 {
+        color: #1e3c72;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+    a {
+        color: #2a5298;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+</style>
+
+<div class="background-overlay"></div>
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
