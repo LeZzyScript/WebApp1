@@ -1,0 +1,38 @@
+﻿@model MyWebApplication.Models.Student
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<div class="container p-3">
+    <h2 class="text-primary">Student Details</h2>
+    <hr />
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">ID:</div>
+        <div class="col-9">@Model.Id</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">First Name:</div>
+        <div class="col-9">@Model.FirstName</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Last Name:</div>
+        <div class="col-9">@Model.LastName</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Age:</div>
+        <div class="col-9">@Model.Age</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Course:</div>
+        <div class="col-9">@Model.Course</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Email:</div>
+        <div class="col-9">@Model.Email</div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    </div>
+</div>

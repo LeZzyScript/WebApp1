@@ -1,0 +1,33 @@
+﻿@model MyWebApplication.Models.Student
+@{
+    ViewData["Title"] = "Delete Student";
+}
+
+<div class="container p-3">
+    <h2 class="text-danger">Delete Confirmation</h2>
+    <hr />
+    <p>Are you sure you want to delete the following student?</p>
+
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">ID:</div>
+        <div class="col-9">@Model.Id</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">First Name:</div>
+        <div class="col-9">@Model.FirstName</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Last Name:</div>
+        <div class="col-9">@Model.LastName</div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-3 fw-bold">Course:</div>
+        <div class="col-9">@Model.Course</div>
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
